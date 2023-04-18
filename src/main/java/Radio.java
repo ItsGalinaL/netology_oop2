@@ -29,7 +29,7 @@ public class Radio {
     }
 
     public void setStation(int number) {
-        if (number >= 0 && number <= maxStations) {
+        if (number >= 0 && number < maxStations) {
             station = number;
         }
     }
