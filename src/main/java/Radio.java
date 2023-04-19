@@ -1,7 +1,7 @@
 public class Radio {
 
-    public int station = 0;
-    public int volume = 0;
+    private int station = 0;
+    private int volume = 0;
 
     public void nextStation() {
         if (station == 9) {
@@ -17,6 +17,10 @@ public class Radio {
         } else {
             station = station - 1;
         }
+    }
+
+    public int getStation() {
+        return station;
     }
 
     public void setStation(int number) {
@@ -35,5 +39,13 @@ public class Radio {
         if (volume > 0) {
             volume = volume - 1;
         }
+    }
+
+    public int getVolume() {
+        return volume;
+    }
+
+    public void setVolume(int volume) {
+        this.volume = volume;
     }
 }

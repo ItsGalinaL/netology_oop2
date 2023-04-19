@@ -10,27 +10,27 @@ class RadioTest {
 
         radio.nextStation();
 
-        assertEquals(1, radio.station);
+        assertEquals(1, radio.getStation());
     }
 
     @Test
     void testNextStationLimit() {
         Radio radio = new Radio();
-        radio.station = 9;
+        radio.setStation(9);
 
         radio.nextStation();
 
-        assertEquals(0, radio.station);
+        assertEquals(0, radio.getStation());
     }
 
     @Test
     void testPrevStation() {
         Radio radio = new Radio();
-        radio.station = 9;
+        radio.setStation(9);
 
         radio.prevStation();
 
-        assertEquals(8, radio.station);
+        assertEquals(8, radio.getStation());
     }
 
     @Test
@@ -39,7 +39,7 @@ class RadioTest {
 
         radio.prevStation();
 
-        assertEquals(9, radio.station);
+        assertEquals(9, radio.getStation());
     }
 
     @Test
@@ -48,7 +48,7 @@ class RadioTest {
 
         radio.setStation(4);
 
-        assertEquals(4, radio.station);
+        assertEquals(4, radio.getStation());
     }
 
     @Test
@@ -57,7 +57,7 @@ class RadioTest {
 
         radio.setStation(40);
 
-        assertEquals(0, radio.station);
+        assertEquals(0, radio.getStation());
     }
 
     @Test
@@ -66,7 +66,7 @@ class RadioTest {
 
         radio.setStation(-40);
 
-        assertEquals(0, radio.station);
+        assertEquals(0, radio.getStation());
     }
 
     @Test
@@ -75,27 +75,27 @@ class RadioTest {
 
         radio.increaseVolume();
 
-        assertEquals(1, radio.volume);
+        assertEquals(1, radio.getVolume());
     }
 
     @Test
     void testIncreateVolumeLimit() {
         Radio radio = new Radio();
-        radio.volume = 10;
+        radio.setVolume(10);
 
         radio.increaseVolume();
 
-        assertEquals(10, radio.volume);
+        assertEquals(10, radio.getVolume());
     }
 
     @Test
     void testDecreaseVolume() {
         Radio radio = new Radio();
-        radio.volume = 10;
+        radio.setVolume(10);
 
         radio.decreaseVolume();
 
-        assertEquals(9, radio.volume);
+        assertEquals(9, radio.getVolume());
     }
 
     @Test
@@ -104,6 +104,6 @@ class RadioTest {
 
         radio.decreaseVolume();
 
-        assertEquals(0, radio.volume);
+        assertEquals(0, radio.getVolume());
     }
 }
