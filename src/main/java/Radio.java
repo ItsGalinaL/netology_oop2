@@ -57,4 +57,8 @@ public class Radio {
     public void setVolume(int volume) {
         this.volume = volume;
     }
+
+    public int getMaxStations() {
+        return maxStations;
+    }
 }
