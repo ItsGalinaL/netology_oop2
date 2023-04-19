@@ -1,8 +1,8 @@
 public class Radio {
 
-    public int maxStations;
-    public int station = 0;
-    public int volume = 0;
+    private int maxStations;
+    private int station = 0;
+    private int volume = 0;
 
     public Radio() {
         maxStations = 10;
@@ -28,6 +28,10 @@ public class Radio {
         }
     }
 
+    public int getStation() {
+        return station;
+    }
+
     public void setStation(int number) {
         if (number >= 0 && number < maxStations) {
             station = number;
@@ -44,5 +48,13 @@ public class Radio {
         if (volume > 0) {
             volume = volume - 1;
         }
+    }
+
+    public int getVolume() {
+        return volume;
+    }
+
+    public void setVolume(int volume) {
+        this.volume = volume;
     }
 }
