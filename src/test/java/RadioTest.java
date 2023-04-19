@@ -52,6 +52,13 @@ class RadioTest {
     }
 
     @Test
+    void testConstructorWithStation() {
+        Radio radio = new Radio(5);
+
+        assertEquals(5, radio.getMaxStations());
+    }
+
+    @Test
     void testSetStationRightLimit() {
         Radio radio = new Radio();
 
@@ -70,7 +77,7 @@ class RadioTest {
     }
 
     @Test
-    void testIncreateVolume() {
+    void testIncreaseVolume() {
         Radio radio = new Radio();
 
         radio.increaseVolume();
@@ -79,23 +86,23 @@ class RadioTest {
     }
 
     @Test
-    void testIncreateVolumeLimit() {
+    void testIncreaseVolumeLimit() {
         Radio radio = new Radio();
-        radio.setVolume(10);
+        radio.setVolume(100);
 
         radio.increaseVolume();
 
-        assertEquals(10, radio.getVolume());
+        assertEquals(100, radio.getVolume());
     }
 
     @Test
     void testDecreaseVolume() {
         Radio radio = new Radio();
-        radio.setVolume(10);
+        radio.setVolume(100);
 
         radio.decreaseVolume();
 
-        assertEquals(9, radio.getVolume());
+        assertEquals(99, radio.getVolume());
     }
 
     @Test
